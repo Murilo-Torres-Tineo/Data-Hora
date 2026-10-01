@@ -91,19 +91,44 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 <?php
 echo "<br>Exercício 5: " . "<br>";
-echo "Digite o primeiro horário (HH:MM:SS): <br>";
-$primeiroHorario = "08:30:00";
-echo $primeiroHorario . "<br>";
-echo "Digite o segundo horário (HH:MM:SS): <br>";
-$segundoHorario = "17:45:30";
-echo $segundoHorario . "<br>";
 
-$segundos1 = strtotime($primeiroHorario) - strtotime(date("Y-m-d 00:00:00"));
-$segundos2 = strtotime($segundoHorario) - strtotime(date("Y-m-d 00:00:00"));
-$diferencaSegundos = abs($segundos2 - $segundos1);
+$primeiroHorario = "";
+$segundoHorario = "";
+$quantidadeSegundos = "";
 
-echo "Quantidade de segundos entre os horários: " . $diferencaSegundos . " segundos" . "<br>";
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $primeiroHorario = $_POST["primeiroHorario"] ?? "";
+    $segundoHorario = $_POST["segundoHorario"] ?? "";
 
+    if (!empty($primeiroHorario) && !empty($segundoHorario)) {
+        $inicio = strtotime(date("Y-m-d") . " " . $primeiroHorario);
+        $fim = strtotime(date("Y-m-d") . " " . $segundoHorario);
+        $quantidadeSegundos = abs($fim - $inicio);
+    }
+}
+?>
+<div class="form-box">
+    <h3>Exercício 5</h3>
+    <form method="POST">
+        <label for="primeiroHorario">Primeiro horário:</label>
+        <input type="time" id="primeiroHorario" name="primeiroHorario" step="1"
+            value="<?php echo htmlspecialchars($primeiroHorario); ?>">
+
+        <label for="segundoHorario">Segundo horário:</label>
+        <input type="time" id="segundoHorario" name="segundoHorario" step="1"
+            value="<?php echo htmlspecialchars($segundoHorario); ?>">
+
+        <button type="submit">Calcular</button>
+    </form>
+
+    <?php if ($quantidadeSegundos !== ""): ?>
+        <div class="resultado">
+            Quantidade de segundos entre os horários: <?php echo $quantidadeSegundos; ?> segundos
+        </div>
+    <?php endif; ?>
+</div>
+
+<?php
 echo "<br>Exercício 6: " . "<br>";
 $dataAtual = date("Y-m-d");
 $dataVencimento = "2026-10-05";
