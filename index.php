@@ -148,4 +148,8 @@ if ($hojeTimestamp > $vencimentoTimestamp) {
 } else {
     echo "O prazo vence hoje." . "<br>";
 }
+
+echo "<br>" . "<hr>" . "<br>";
+
+echo "<a href='LuckyTT.php'>Lucky's Travel Time</a>" . "<br>" . "<br>";
 ?>
