@@ -84,8 +84,9 @@ $weekdayName = $weekdayMap[$currentWeekday] ?? $currentWeekday;
                     </svg>
                 </div>
                 <div class="brand__text">
-                    <span class="brand__travel">TRAVEL</span>
-                    <span class="brand__time">TIME</span>
+                    <span class="brand__travel">LUCKY'S</span>
+                    <span class="brand__time">TRAVEL</span>
+                    <span class="brand__travel">TIME</span>
                     <small>AGÊNCIA DE VIAGENS</small>
                 </div>
             </div>
@@ -108,7 +109,7 @@ $weekdayName = $weekdayMap[$currentWeekday] ?? $currentWeekday;
                         stroke-linejoin="round" />
                     <path d="M2 18.5h20" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
                 </svg>
-                <span>Explore o mundo com a Travel Time!</span>
+                <span>Explore o mundo com a Lucky's Travel!</span>
             </div>
         </div>
     </header>
@@ -118,8 +119,8 @@ $weekdayName = $weekdayMap[$currentWeekday] ?? $currentWeekday;
             <div class="container hero__inner">
                 <div class="hero__content">
                     <h1>
-                        <span class="travel">TRAVEL</span>
-                        <span class="time">TIME</span>
+                        <span class="travel">Lucky's</span>
+                        <span class="time">Travel</span>
                     </h1>
                     <p class="hero__subtitle">Sua viagem começa antes mesmo do embarque.</p>
                     <p class="hero__description">
@@ -323,7 +324,7 @@ $weekdayName = $weekdayMap[$currentWeekday] ?? $currentWeekday;
 
     <footer class="site-footer" id="contato">
         <div class="container">
-            © 2026 Travel Time • Agência de Viagens • Sua próxima aventura começa aqui.
+            © 2026 Lucky's Travel Time • Agência de Viagens • Sua próxima aventura começa aqui.
         </div>
     </footer>
 </body>
